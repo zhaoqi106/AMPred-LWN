@@ -9,5 +9,20 @@ You can get full model at
 --来自百度网盘超级会员v9的分享
 which include Mamba architecture locally.
 
+
+
+### Mamba-2 installation (important)
+
+AMPred-LWN uses Mamba-related CUDA extensions for speed (e.g., `mamba-ssm`, `causal-conv1d`).
+ If you have a CUDA-enabled environment, **install/build CUDA kernels** (recommended):
+Mamba-ssm we have already packed a full folder in baidunetdisk.
+
+```
+# Build CUDA extensions (recommended for speed)
+MAMBA_FORCE_BUILD=1 CAUSAL_CONV1D_FORCE_BUILD=1 \
+pip install  --no-binary causal-conv1d \
+  --force-reinstallcausal-conv1d
+```
+
 ---
 Happy modelling! 🎉
